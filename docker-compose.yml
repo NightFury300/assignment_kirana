@@ -5,6 +5,4 @@ services:
       - "3000:3000"  # Map container port 3000 to host port 3000
     env_file:
       - .env  # Load environment variables from the .env file
-    volumes:
-      - .:/usr/src/app  # Mount the current directory into the container
-    restart: always  # Automatically restart the container if it crashes
+    restart: no  # Automatically restart the container if it crashes
