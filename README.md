@@ -5,8 +5,7 @@
 A service to process thousands of images collected from stores.
 
 ## Features
--The service receives the jobs with image URLs and store id.
-There can be multiple jobs with thousands of images each at a given time, a job can take few minutes to an hour to complete. Using the API a user submits the job.
+- The service receives the jobs with image URLs and store id.There can be multiple jobs with thousands of images each at a given time, a job can take few minutes to an hour to complete. Using the API a user submits the job.
 
 - We process a job, the service downloads the images and calculates the perimeter 2* [Height+Width] of each image. After calculating the perimeter of the image we have a random sleep time of 0.1 to 0.4 secs (this is to imitate GPU processing). After this, we store the results at an image level.
 
