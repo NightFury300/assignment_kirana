@@ -4,10 +4,10 @@ import { fileURLToPath } from 'url';
 import sharp from 'sharp';
 import { ImageResult } from '../models/Image.model.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
-const tempDirectory = path.join(__dirname, 'temp');
+const tempDirectory = path.join(dirname, 'temp');
 if (!fs.existsSync(tempDirectory)) {
     fs.mkdirSync(tempDirectory); 
 }
