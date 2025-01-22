@@ -64,10 +64,13 @@ http://localhost:3000/
 
 **1. Submit Job**
 Create a job to process the images collected from stores.
-**URL:** `/api/submit/`
-**Method:** `POST`
+
+**URL:** ```/api/submit/```
+
+**Method:** ```POST```
+
 **Request Payload:**
-`
+```
 {
    "count":2,
    "visits":[
@@ -88,13 +91,17 @@ Create a job to process the images collected from stores.
       }
    ]
 }
-`
+```
 
 **2. Get Job Info**
 Fetches the status of the job with jobid in query parameter.
-**URL** : `/api/status?jobid=123`
-**URL Parameters**: - `jobid` Job ID received while creating the job
-**Method**: `GET`
+
+**URL** : ```/api/status?jobid=123```
+
+**URL Parameters**: - ```jobid``` Job ID received while creating the job
+
+**Method**: ```GET```
+
 
 ## Acknowledgments
 Thank you for checking out my project! For any inquiries or feedback, feel free to reach out to me at [shubhsaxena447@gmail.com](mailto:shubhsaxena447@gmail.com).
