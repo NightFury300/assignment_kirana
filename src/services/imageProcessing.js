@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import sharp from 'sharp';
+import imageSize from 'image-size';
 import { ImageResult } from '../models/Image.model.js';
 
 const filename = fileURLToPath(import.meta.url);
@@ -29,22 +29,21 @@ async function downloadImage(url) {
     }
 };
 
-async function calculateImagePerimeter(imagePath) {
-    try {
-      const image = sharp(imagePath);
-      const imgdata = await image.metadata();
-      
-      const height = imgdata.height;
-      const width = imgdata.width;
-      
-      const perimeter = 2 * (height + width);
-      
+function calculateImagePerimeter(imagePath) {
+  try {
+      const dimensions = imageSize(imagePath);
+      const { width, height } = dimensions;
+
+      if (!width || !height) {
+          throw new Error("Invalid image dimensions");
+      }
+
+      const perimeter = 2 * (width + height);
       return perimeter;
-    } catch (error) {
-      console.error(`Error calculating perimeter for image at ${imagePath}:`, error);
-      throw error;
-    }
-};
+  } catch (error) {
+      throw new Error(`Failed to calculate perimeter: ${error.message}`);
+  }
+}
 
 async function storeResults (jobId, storeId, imageUrl, perimeter) {
     try {
