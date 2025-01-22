@@ -65,6 +65,34 @@ npm run dev
 http://localhost:3000/
 ```
 
+## Steps to Set Up (Using Docker)-
+
+1.Clone the repository using
+```sh
+git clone https://github.com/NightFury300/assignment_kirana.git
+```
+
+2.Use Command to change directory to assignment_ast folder which contains the src folder
+```sh
+cd assignment_kirana
+```
+
+3.Make sure docker is running and use the command
+```sh
+docker-compose build
+```
+
+4.After building start the server using
+```sh
+docker-compose up
+```
+
+5.The server should be up and running now, at-
+```sh
+http://localhost:3000/
+```
+Refer to the APIs provided below.
+
 ## Usage
 
 **1. Submit Job**
