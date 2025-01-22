@@ -32,6 +32,11 @@ To run this application locally without docker, the following dependencies are r
   }
 ```
 
+## Running directly
+If you are directly downloading the whole folder as provided with the node modules folder,
+trying running ```npm run dev``` after doing ```cd assignment_kirana```
+It should work, although this might have troubles across different operating systems, try running it locally or using docker if any issue occurs, or just hit me up. Mob-7905256733
+
 ## Steps To Step Up
 
 1.Clone the repository using
